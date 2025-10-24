@@ -1,0 +1,9 @@
+services:
+  todox-app:
+    image: node:lts-alpine
+    command: sh -c "npm run build && npm run start"
+    ports:
+      - 8080:5001
+    working_dir: /app
+    volumes:
+      - .:/app
